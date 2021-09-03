@@ -1,0 +1,65 @@
+h1
+{color:Navy;
+}
+body{
+font-weight:bold;
+
+}
+hr{
+width:70%;
+border-top:1px dashed;
+}
+
+.header{
+
+font-family:times new roman;
+font-size:50px;
+color:MidnightBlue;
+padding:0px;
+text-align:center;
+margin=0px;
+}
+.tables,th,td
+{
+ border:solid 1px;
+ border color:#6ACCBC;
+ margin=0px;
+boder-collapse:collapse;
+width:30%;
+padding:10px;
+background-color:#E8F6F3;
+}
+th
+{
+color:#34495E;
+}
+h2
+{
+color:MidnightBlue;
+text-align:center;
+}
+.tb
+{      border:solid 1px;
+       background-color:#E8F6F3;
+}
+a:visited
+{
+ color:green;
+}
+a:hover
+{
+color:hotpink;
+}
+a:active
+{
+color:red;
+}
+ul{
+
+list-style-position:inside;
+list-type:circle;
+}
+.main{
+
+background-color:green;
+}
