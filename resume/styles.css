@@ -6,8 +6,10 @@ font-weight:bold;
 
 }
 hr{
-width:70%;
-border-top:1px dashed;
+width:5%;
+border: 10px dotted;
+border-style: none none dotted;
+color: lightgrey;
 }
 
 .header{
