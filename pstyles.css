@@ -1,0 +1,40 @@
+.head
+{
+background-color:tomato;
+font-size:400%;
+font-family:verdana;
+color:white;
+text-align:center;
+padding:10px;
+margin:0px;
+display: block;
+
+}
+.cont
+{
+background-color:orange;
+font-size:300%;
+padding:10px;
+margin:0px;
+}
+ul
+{
+display:inline;
+}
+ul li
+{
+display:inline-block;
+color:#dd000;
+margin:20px;
+}
+#nav li{
+color:#00dd00;
+}
+footer {
+  background-color: #dd8899;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}footer p {
+    color: #000;
+}
