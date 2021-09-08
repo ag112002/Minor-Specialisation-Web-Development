@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calculate</title>
+</head>
+<body>
+<h1 style="text-align:center;">CALCULATOR</h1>
+<h2>First Number</h2>
+<input type="text" id="val.1" value="1" name="val.1">
+<h2>Second Number</h2>
+<input type="text" id="val.2" value="1" name="val.2">
+<br>
+<button onclick="cal()" id="button1" name"btn">Click here</button>
+<br><br>
+<button id="demo1" type="button" onclick="cal()">+</button>
+<br>
+<button id="demo2" type="button" onclick="cal()">-</button>
+<br>
+<button id="demo3" type="button" onclick="cal()">/</button>
+<br>
+<script>
+function cal()
+{
+ var num1=parseInt(document.getElementById("val.1").value);
+ var num2=parseInt(document.getElementById("val.2").value);
+const sum=num1+num2;
+const sub=num1-num2;
+const div=num1/num2;
+
+document.getElementById("demo1").innerHTML=sum;
+document.getElementById("demo2").innerHTML=sub;
+document.getElementById("demo3").innerHTML=div;
+
+}
+</script>
+</body>
+</html>
