@@ -17,6 +17,14 @@
     
      });
   });
+  $(document).ready(function()
+  {
+     $("#rem").click(function()
+     {
+     $("ol").empty();
+    
+     });
+  });
 </script>
 </head>
 <body>
@@ -25,5 +33,6 @@
         <ol></ol>
     </div>
     <button id="butt" style="background-color: tomato;"><strong>TO DO LIST</strong></button>
+    <button id="rem">CLEAR LIST</button>
 </body>
 </html>
