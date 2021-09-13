@@ -1,0 +1,100 @@
+*
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+section
+{
+  border:1px solid black;
+  background-color: lemonchiffon;
+  height:250px;
+
+}
+
+h2
+{
+    float:right;
+    border: 1px solid black;
+    font-size: 125%;
+    background-color: goldenrod;
+    margin-top: 0px;
+    padding: 0px;
+}
+.sec1
+{
+    float:left;
+    
+}
+.sec2
+{
+    float:right;
+    
+
+}
+.sec3
+{
+    float:right;
+
+}
+/*For desktop*/
+@media (min-width:992px)
+{
+   .sec1
+   {
+       width:33%;
+       padding:10px;
+       float:left;
+       
+   }
+   .sec2{
+    width:35%;
+    padding:10px;
+    float:right;
+        } 
+    .sec3
+    {
+    width:25%;
+    }
+}
+/*For tablet*/
+@media (min-width:768px)and(max-width:991px)
+{
+    .sec1{
+        width:11%;
+        
+        float:left;
+    }
+    .sec2{
+     width:5%;
+     
+     float:right;
+     
+         } 
+     .sec3{
+     width:3%;
+     float:right;
+ }
+}
+/*For mobile */
+@media (max-width:767px)
+{
+    .sec1{
+        width:5px;
+        height:5%;
+        
+    }
+    .sec2{
+     width:5px;
+     height:5%;
+     padding:3px;
+         } 
+     .sec3{
+     width:5px;
+     height:5%;
+     padding:3px;
+ }
+}
