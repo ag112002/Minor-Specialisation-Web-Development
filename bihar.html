@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>BIHAR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>BIHAR</h1>
+    <br>
+    <br>
+   <center>
+    <div class="img-slider" style="background-color: black;">
+        <div class="slide active">
+          <img src="https://cdn.britannica.com/12/94612-050-B4EEB84A/temple-Buddhist-Mahabodhi-Bihar-India-Bodh-Gaya.jpg" style="border:solid 10px yellow; border-radius: 5px;"
+           alt="">
+          <div class="info">
+            <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://static2.tripoto.com/media/filter/tst/img/1690554/TripDocument/1580819939_karnataka.png" alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+          <div class="info">
+            
+          </div>
+        </div>
+         <div class="slide">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2duln4RKDhnWIp0HgrKdflcXuNpDqcum0ig&usqp=CAU" alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+          <div class="info">
+           
+          </div>
+        </div>
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </center>
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 5000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+   <br>
+   <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="box1">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About Bihar</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Bihar (/bɪˈhɑːr/; Hindi pronunciation: [bɪˈɦaːr] (About this soundlisten)) is a state in eastern India. It is the third-largest state by population and twelfth-largest by territory, with an area of 94,163 km2 (36,357 sq mi). It is contiguous with Uttar Pradesh to its west, Nepal to the north, the northern part of West Bengal to the east, and with Jharkhand to the south. The Bihar plain is split by the river Ganges, which flows from west to east.[11] Bihar is also the world's fourth-most populous subnational entity.
+
+            On 15 November 2000, southern Bihar was ceded to form the new state of Jharkhand.[12] Only 11.3% of the population of Bihar lives in urban areas, which is the lowest in India after Himachal Pradesh.[13] Additionally, almost 58% of Biharis are below the age of 25, giving Bihar the highest proportion of young people of any Indian state.[14] The official languages are Hindi and Urdu, although other languages are common, including Maithili, Magahi, Bhojpuri and other Bihari languages.
+            
+            In ancient and classical India, the area that is now Bihar was considered a centre of power, learning, and culture.[15] From Magadha arose India's first empire, the Maurya empire, as well as one of the world's most widely adhered-to religions: Buddhism.[16] Magadha empires, notably under the Maurya and Gupta dynasties, unified large parts of South Asia under a central rule.[17] Another region of Bihar is Mithila which was an early centre of learning and the centre of the Videha kingdom.[18][19]
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Aerial_view%2C_Patna_%28314731093%29.jpg/300px-Aerial_view%2C_Patna_%28314731093%29.jpg
+                    "
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box2">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+            Bihar</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Bihar covers a total area of 94,163 km2 (36,357 sq mi), with an average elevation above sea level of 173 feet (53 m). It is land locked by Nepal in the north, Jharkhand in the south West Bengal in the east and Uttar Pradesh to the west.[58] It has three parts on the basis of physical and structural conditions: the Southern Plateau, the Shivalik Region, and Bihar's Gangetic Plain.[59] Furthermore, the vast stretch of fertile Bihar Plain is divided by the Ganges River into two unequal parts – North Bihar and South Bihar.[60] The Ganges flows west–east and, along with its tributaries, regularly floods parts of the Bihar plain. The main northern tributaries are the Gandak and Koshi, which originate in the Nepalese Himalayas, and the Bagmati, which originates in the Kathmandu Valley. Other tributaries are the Son, Budhi Gandak, Chandan, Orhani and Phalgu. Bihar have some small hills, such as the Rajgir hills in center, Kaimur Range in south-west and Shivalik Range in North. Bihar has notified forest area of 6,764.14 km2, which is 7.1 percent of its geographical area.[61] The sub-Himalayan foothills of Shivalik ranges, primary Someshwar and Dun mountain, in West Champaran district are clad in a belt of moist deciduous forest. As well as trees, this consists of scrub, grass and reeds.
+
+            Bihar lies completely in the Subtropical region of the Temperate Zone, and its climatic type is humid subtropical. Its temperature is subtropical in general, with hot summers and cold winters. Bihar has an average daily high temperature of only 26 degrees centigrade. With a yearly average of 26 degrees the climate is very warm, but has only a very few tropical and humid months. Several months of the year it is warm to hot at temperatures continuously above 25 degrees centigrade, sometimes up to 29 degrees. Dued to the lesser rain the best time for traveling is from October to April. The most rain days occur from May to September.[62]
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2duln4RKDhnWIp0HgrKdflcXuNpDqcum0ig&usqp=CAU"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box3">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+            Bihar</h2>
+            Airways
+Main article: List of airports in Bihar
+Bihar has a total of three operational airports as of 2020: Lok Nayak Jayaprakash Airport in Patna, Gaya Airport in Gaya, and Darbhanga Airport in Darbhanga. All three airports have scheduled flights to major cities around India. Gaya Airport is the only international airport in Bihar, having seasonal flights to countries like Thailand, Bhutan, and Myanmar.
+
+State highways
+Main article: List of state highways in Bihar
+Bihar has state highways with total length of 4,006 km (2,489 mi)  and national highways with total length of 5,358 km (3,329 mi).
+
+Inland Waterways
+The Ganges is navigable throughout the year, and was the principal river highway across the vast Indo-Gangetic Plain. Vessels capable of accommodating five hundred merchants were known to ply this river in the ancient period, when it served as a conduit for overseas trade. The role of the Ganges as a channel for trade was enhanced by its natural links to major rivers and streams in north and south Bihar.[146]
+
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+           
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="           https://images.hindustantimes.com/img/2021/04/25/550x309/15bc87fc-a57b-11eb-a6ca-1ce56e8b7c0c_1619326384144.jpg         " alt=""
+                    width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box4">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in Bihar
+        </h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Bihar is visited by many tourists from around the world,[140] In 2019 Total 33 million of tourists visited Bihar which includes more than 1 million foreign tourist.[141] Bihar is home of two UNESCO World Heritage Site. The culture and heritage of Bihar can be observed from the large number of ancient monuments spread throughout the state. The Mahabodhi Temple (literally: "Great Awakening Temple"), a UNESCO World Heritage Site, is an ancient, but much rebuilt and restored, Buddhist temple in Bodh Gaya, marking the location where the Buddha is said to have attained enlightenment. Bodh Gaya (in Gaya district) is about 96 km (60 mi) from Patna, Bihar state, India. Nalanda Mahavihara, a UNESCO World Heritage Site, is an worlds oldest university situated in Nalanda, Bihar. It comprises the archaeological remains of a monastic and scholastic institution dating from the 3rd century BCE to the 13th century CE. It includes stupas, shrines, viharas (residential and educational buildings) and important art works in stucco, stone and metal. Nalanda stands out as the most ancient university of the Indian Subcontinent. Archaeological Survey of India has recognized 72 monuments in Bihar as Monuments of National Importance. Furthermore, Archaeological Survey of India has recognized 30 additional monument as protected monuments in Bihar.
+
+            Bihar has many places for Ecotourism which includes Valmiki National Park is famous national park and tiger reserve. Vikramshila Dolphin Sanctuary is home of endangered Gangetic Dolphin. Bihar has many wildlife sanctuary such Bhimbandh Wildlife Sanctuary, Gautam Buddha Wildlife Sanctuary, Kaimur Sanctuary, Udaypur Wildlife Sanctuary and Pant Wildlife Sanctuary. Bihar invites many species of migratory birds at bird sanctuary like Kanwar Lake Bird Sanctuary and Nagi Dam Bird Sanctuary.
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="data:image/jpeg;base64,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 "
+                    alt="" width="800px" height="600px">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
