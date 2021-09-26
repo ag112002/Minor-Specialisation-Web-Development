@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>TAMIL NADU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>TAMIL NADU</h1>
+    <br>
+    <br>
+   <center>
+    <div class="img-slider" style="background-color: black;">
+        <div class="slide active">
+          <img src="https://1.bp.blogspot.com/-qikR3k7Pgx8/VbEP32CpF7I/AAAAAAAAAJE/yCQXCXaf0ys/s1600/apply%2Bvoter%2Bid%2Bcard%2Btamil%2Bnadu.jpg
+          " style="border:solid 10px yellow; border-radius: 5px;"
+           alt="">
+          <div class="info">
+            <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://hhic.b-cdn.net/app/webroot/pictures/tours/tourintro/heritage-tour-south-india-11.jpeg" alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+          <div class="info">
+            
+          </div>
+        </div>
+         <div class="slide">
+          <img src="https://lh3.googleusercontent.com/proxy/6aGAxFI-eMGYHhuzF4FIWDPeFMnP_zo1BEaEluf_ZSIY2bYjhnCqA-ezk32CmPSyhWIFAegoDegit2PzbDzbCbO3RQSpxgP3kcezgfRPwHXjc6xl
+          " alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+          <div class="info">
+           
+          </div>
+        </div>
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </center>
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 5000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+   <br>
+   <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="box1">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About Tamil Nadu</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Tamil Nadu (/ˌtæmɪl ˈnɑːduː/; Tamil: [ˈtamiɻ ˈnaːɽɯ] (About this soundlisten)) is a state in South India. Its capital and largest city is Chennai. Tamil Nadu lies in the southernmost part of the Indian subcontinent and is bordered by the union territory of Puducherry and the South Indian states of Kerala, Karnataka, and Andhra Pradesh. It is bounded by the Eastern Ghats on the north, by the Nilgiri Mountains, the Meghamalai Hills, and Kerala on the west, by the Bay of Bengal in the east, by the Gulf of Mannar and the Palk Strait on the southeast, and by the Indian Ocean on the south. The state shares a maritime border with the nation of Sri Lanka. Its official language is Tamil, which is one of the longest-surviving classical languages in the world.
+
+            The region was ruled by several regimes, including the "three crowned rulers" – Chera, Chola and Pandyan states, which shape the region's cuisine, culture, and architecture. After the fall of the Kingdom of Mysore, the British Colonial rule during the modern period led to the emergence of Chennai, then known as Madras, as a metropolitan city. Modern-day Tamil Nadu was formed in 1956 after the reorganisation of states on linguistic lines. The state is home to a number of historic buildings, multi-religious pilgrimage sites, hill stations and three World Heritage Sites.[8][9][10]
+            
+            The economy of Tamil Nadu is the second-largest in India, with a gross state domestic product (GSDP) of ₹21.6 trillion (US$300 billion) and has the country's 11th-highest GSDP per capita of ₹229,000 (US$3,200).[3] It ranks 11th among all Indian states in human development index.[6] Tamil Nadu is the most urbanised state in India, and one of the most industrialised states; the manufacturing sector accounts for more than one-third of the state's GDP.[11] Tamil Nadu is the tenth largest Indian state by area and the sixth largest by population.
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://www.indianpanorama.in/images/india-tour/about-tamilnadu.jpg"
+
+     
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box2">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+            Tamil Nadu</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            The western, southern and the north-western parts are hilly and rich in vegetation. Tamil Nadu is the only state in India which has both the Western Ghat and the Eastern Ghat mountain ranges which both meet at the Nilgiri hills.[1] The Western Ghats dominate the entire western border with Kerala, effectively blocking much of the rain bearing clouds of the South West Monsoon from entering the state. The eastern parts are fertile coastal plains. The northern parts are a mix of hills and plains. The central and the south-central regions are arid plains.
+
+
+Palakkad gap allows south-west monsoon winds to pass through the western ghats producing rain in western Tamil Nadu
+
+A semi-arid wasteland near Tirunelveli. Monsoon winds are prevented by the Agasthyamalai Range of the Western Ghats
+Natural hazards
+Tamil Nadu has a coastline of about 1,076 kilometres (700 mi) which is the country's third longest coastline after Gujarat and Andhra Pradesh, Tamil Nadu's coastline bore the brunt of the 2004 Indian Ocean tsunami when it hit India, which caused 7,793 direct deaths in the state.[2] Tamil Nadu falls mostly in a region of low seismic hazard with the exception of the western border areas that lie in a low to moderate hazard zone. Parts of this region have experienced seismic activity in the M5.0 range.[3]
+
+Climate
+Tamil Nadu is heavily dependent on monsoon rains, and thereby is prone to droughts when the monsoons fail. The climate of the state ranges from wet rainforests to semi-arid. Tamil Nadu agriculture is a gambling of monsoon. The state has distinct periods of rainfall, which are the advancing monsoon period, South-west monsoon (from June to September) with strong southwest winds, the North-east monsoon (from October to December), with dominant northeast winds, and the Dry season (from January to May). The normal annual rainfall of the state is about 945 mm (37.2 in),[4] of which 48% is through the North East monsoon, and 32% through the South West monsoon. Since the state is entirely dependent on rains for recharging its water resources, monsoon failures lead to acute water scarcity and severe drought.
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Agasthiyamalai_range_and_Tirunelveli_rainshadow.jpg/800px-Agasthiyamalai_range_and_Tirunelveli_rainshadow.jpg
+                    "
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box3">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+            Tamil</h2>
+         
+           Tamil Nadu has an extensive road network. The state road network covers about 153 km per 100 km2 area, which is higher than the country's average road network coverage of 103 km per 100 km2 area. A separate Highways Department (HD) was established in April 1946 and the same has been renamed as Highways & Minor Ports Department (HMPD) on 30 October 2008.[1] HMPD of Tamil Nadu is primarily responsible for construction and maintenance of roads including national highways, state highways and major district roads in Tamil Nadu. It operates through 7 wings namely National Highways Wing, Construction & Maintenance Wing, NABARD and Rural Roads Wing, Projects Wing, Metro Wing, Tamil Nadu Road Sector Project Wing, Investigation and Designs Wing geographically spread across the state in 35 districts with about 120 divisions and 450 subdivisions.
+           In Tamil Nadu, ‘’National Highways Wing’’ of Highways & Minor Ports Department was established in the year 1971 to look after the works of improving, maintaining and renewing of National Highways laid down by National Highways Authority of India (NHAI).[3] NH 47, NH 49, NH 208 and NH 220 connects Tamil Nadu with Kerala. NH 67, NH 207 and NH 209 connects Tamil Nadu with Karnataka. NH 205, NH 219 and NH 234 connects Tamil Nadu with Andhra Pradesh. NH 4 connects Tamil Nadu with Maharashtra, Karnataka, and Andhra Pradesh. NH 5 connects Tamil Nadu with Orissa and Andhra Pradesh. NH 44 connects Tamil Nadu with Jammu and Kashmir, Punjab, Haryana, Delhi, Uttar Pradesh, Madhya Pradesh, Maharashtra, Andhra Pradesh, and Karnataka. NH 66 connects Tamil Nadu with Karnataka and Puducherry.
+           Roads which connects district headquarters, important towns and the National Highways in the State and neighboring States are declared as State Highways. Construction & Maintenance wing of Highways Department looks after Construction, Maintenance of all the State Highways (SH), Major District Roads (MDR), Other District Roads (ODR). Tamil Nadu State Highways Network has 7 circles namely Chennai, Coimbatore, Salem, Trichy, Madurai and Tirunelveli.[
+           This category includes Major District Roads, Other District Roads (ODR), Rural & Sugarcane Roads and Special Roads such as East Coast Road, Rajiv Gandhi Salai / IT Expressway, Ennore-Manali Road Improvement Project (EMRIP), Chennai Port – Maduravoyal Expressway and Outer Ring Road Project. This Roads provides linkage between production and marketing centers within a district. It also provides connectivity for district & taluk headquarters.
+
+The East Coast Road was the first project implemented by Tamil Nadu Road Development Company (TNRDC) in the year 2002 which runs from Chennai till outskirts of Puduchery for a total length of 113.2 kilometres (70.3 mi). The 19 kilometres (12 mi) long Chennai Port – Maduravoyal Expressway is being developed by Chennai Port Trust and Government of Tamil Nadu on 50:50 cost sharing basis at cost of ₹1,655 crore (US$230 million). The 62 kilometres (39 mi) long Outer Ring Road with six lanes from Vandalur to Minjur is the project developed at a cost of ₹1,000 crore (US$140 million) in two phases.
+
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+           
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://i.ytimg.com/vi/m-bV7ySdv1g/maxresdefault.jpg" alt=""
+                    width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box4">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourism in Tamil
+        </h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Tamil Nadu has the largest tourism industry in India with a percentage share of 21.31% and 21.86% of domestic and foreign tourist visits in the country. According to the 2020 Ministry of Tourism report, the number of domestic arrivals was at 494.8 million making the state the second most popular tourist destination in the country, and foreign arrivals numbered 6.86 million, the highest in the country, making it the most popular state for tourism in the country.[1]
+
+Tamil Nadu has more than 4,000 years of continuous cultural history. Tamil Nadu has some of the most remarkable temple architecture in the country, and a living tradition of music, dance, folk arts and fine arts. Tamil Nadu is well renowned for its temple towns and heritage sites, hill stations, waterfalls, national parks, local cuisine, natural environment and wildlife.
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://www.tourmyindia.com/states/tamilnadu/images/chidambaram-kapaleeswarar.jpg"
+                    alt="" width="800px" height="600px">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
