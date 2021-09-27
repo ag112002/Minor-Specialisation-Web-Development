@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>RAJASTHAN</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+  <h1>RAJASTHAN</h1>
+  <br>
+  <br>
+
+  <center>
+    <div class="img-slider" style="background-color: black;">
+      <div class="slide active">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd37hZGx0ivnfDR1Js0mnxu7A4IHyXlSzJd_YzhQAPhhkVjkJw0kXTO0qN7lbwLq0z1gk&usqp=CAU"
+          style="border:solid 10px yellow; border-radius: 5px;" alt="">
+        <div class="info">
+          <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBogLwbpI60xcCcPQBmLOl9JQfEARIgz7MDA&usqp=CAU"
+          alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://www.tourmyindia.com/states/rajasthan/image/best-places-to-visit-rajasthan.webp" alt=""
+          height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+        <div class="info">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+    </div>
+  </center>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <div class="box1">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About RAJASTHAN</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Rajasthan is located on the northwestern side of India, where it comprises most of the wide and inhospitable Thar
+      Desert (also known as the Great Indian Desert) and shares a border with the Pakistani provinces of Punjab to the
+      northwest and Sindh to the west, along the Sutlej-Indus river valley. It is bordered by five other Indian states:
+      Punjab to the north; Haryana and Uttar Pradesh to the northeast; Madhya Pradesh to the southeast; and Gujarat to
+      the southwest. Its geographical location is 23.3 to 30.12 North latitude and 69.30 to 78.17 East longitude, with
+      the Tropic of Cancer passing through the southernmost tip of the state.
+
+      Major features include the ruins of the Indus Valley Civilisation at Kalibangan and Balathal, the Dilwara Temples,
+      a Jain pilgrimage site at Rajasthan's only hill station, Mount Abu, in the ancient Aravalli mountain range and in
+      eastern Rajasthan, the Keoladeo National Park of Bharatpur, a World Heritage Site[12] known for its bird life.
+      Rajasthan is also home to three national tiger reserves, the Ranthambore National Park in Sawai Madhopur, Sariska
+      Tiger Reserve in Alwar and the Mukundra Hills Tiger Reserve in Kota.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Jantar_Mantar_at_Jaipur.jpg/1280px-Jantar_Mantar_at_Jaipur.jpg"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box2">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+      RAJASTHAN</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      The geographic features of Rajasthan are the Thar Desert and the Aravalli Range, which runs through the state from
+      southwest to northeast, almost from one end to the other, for more than 850 kilometres (530 mi). Mount Abu lies at
+      the southwestern end of the range, separated from the main ranges by the West Banas River, although a series of
+      broken ridges continues into Haryana in the direction of Delhi where it can be seen as outcrops in the form of the
+      Raisina Hill and the ridges farther north. About three-fifths of Rajasthan lies northwest of the Aravallis,
+      leaving two-fifths on the east and south direction.
+
+
+      Mount Abu.
+      The Aravalli Range runs across the state from the southwest peak Guru Shikhar (Mount Abu), which is 1,722 metres
+      (5,650 ft) in height, to Khetri in the northeast. This range divides the state into 60% in the northwest of the
+      range and 40% in the southeast. The northwest tract is sandy and unproductive with little water but improves
+      gradually from desert land in the far west and northwest to comparatively fertile and habitable land towards the
+      east. The area includes the Thar Desert. The south-eastern area, higher in elevation (100 to 350 m above sea
+      level) and more fertile, has a very diversified topography. in the south lies the hilly tract of Mewar.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mount_Abu.jpg/1280px-Mount_Abu.jpg" alt=""
+          width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box3">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+      RAJASTHAN</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Air
+      There are six main airports at Rajasthan – Jaipur International Airport, Jodhpur Airport, Udaipur Airport and the
+      recently started Ajmer Airport, Bikaner Airport and Jaisalmer Airport. These airports connect Rajasthan with the
+      major cities of India such as Delhi and Mumbai. There is another airport in Kota but it is not open for
+      commercial/civilian flights yet.[as of?]
+
+      Rail
+      Rajasthan is connected with the main cities of India by rail.[58] Jaipur, Kota, Ajmer, Jodhpur, Bharatpur,
+      Bikaner, Alwar, Abu Road, and Udaipur are the principal railway stations in Rajasthan. Kota City is the only
+      electrified section served by three Rajdhani Expresses and trains to all major cities of India. There is also an
+      international railway, the Thar Express from Jodhpur (India) to Karachi (Pakistan). However, this is not open to
+      foreign nationals.
+
+      Road
+      Rajasthan is well-connected to the main cities of the country including Delhi, Ahmedabad and Indore by state and
+      national highways and served by Rajasthan State Road Transport Corporation (RSRTC)[59] and private operators. Now
+      in March 2017, 75 percent of all national highways being built in Rajasthan according to the public works minister
+      of Rajasthan.
+
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Jaipur_03-2016_34_Jaipur_Metro.jpg/1280px-Jaipur_03-2016_34_Jaipur_Metro.jpg"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box4">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in RAJASTHAN
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Rajasthan attracted a total of 45.9 million domestic and 1.6 million foreign tourists in 2017, which is the tenth
+      highest in terms of domestic visitors and fifth highest in foreign tourists.[77] The tourism industry in Rajasthan
+      is growing effectively each year and is becoming one of the major income sources for the state
+      government.[citation needed] Rajasthan is home to many attractions for domestic and foreign travellers, including
+      the forts and palaces of Jaipur, the lakes of Udaipur, the temples of Rajsamand and Pali, sand dunes of Jaisalmer
+      and Bikaner, Havelis of Mandawa and Fatehpur, the wildlife of Sawai Madhopur, the scenic beauty of Mount Abu, the
+      tribes of Dungarpur and Banswara, and the cattle fair of Pushkar.
+
+
+      Man in Rajasthan, India.
+      Rajasthan is known for its custom culture colors, majestic forts, and palaces, folk dances and music, local
+      festivals, local food, sand dunes, carved temples and beautiful havelis
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Camel_rides_in_Thar_desert.jpg/1280px-Camel_rides_in_Thar_desert.jpg"
+          ; alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
