@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>JAMMU AND KASHMIR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>JAMMU AND KASHMIR</h1>
+    <br>
+    <br>
+    <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://media.easemytrip.com/media/Blog/India/636927396474187392/636927396474187392ozkrTH.jpg"
+                    class="d-block w-100" alt="..." height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://cdn.britannica.com/73/156473-050-E0E9F844/Vidah-Sauda-state-legislature-building-Karnataka-Bengaluru.jpg"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://static2.tripoto.com/media/filter/tst/img/1690554/TripDocument/1580819939_karnataka.png"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+   <center>
+    <div class="img-slider" style="background-color: black;">
+        <div class="slide active">
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nativeplanet.com%2Ftravel-guide%2Fbest-places-to-visit-in-jammu-and-kashmir-005738.html&psig=AOvVaw1jcDDJtgUwWtdnZu9Yb28p&ust=1632984213020000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCKjTkbLKo_MCFQAAAAAdAAAAABAD
+          " style="border:solid 10px yellow; border-radius: 5px;"
+           alt="">
+          <div class="info">
+            <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://spiderimg.amarujala.com/assets/images/2019/08/06/750x506/security-personnel-in-kashmir_1565067669.jpeg" alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+          <div class="info">
+            
+          </div>
+        </div>
+         <div class="slide">
+          <img src="https://www.populationu.com/img/jammu-kashmir-people.jpg" alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+          <div class="info">
+           
+          </div>
+        </div><!--
+        <div class="slide">
+          <img src="4.jpg" alt="">
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="5.jpg" alt="">
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div> -->
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </center>
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 5000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+   <br>
+   <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="box1">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About Jammu and Kashmir</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Jammu and Kashmir[b] is a region administered by India as a union territory and consisting of the southern portion of the larger Kashmir region, which has been the subject of a dispute between India and Pakistan since 1947, and between India and China since 1962.[15][16] The Line of Control separates Jammu and Kashmir from the Pakistani-administered territories of Azad Kashmir and Gilgit-Baltistan in the west and north. It lies to the north of the Indian states of Himachal Pradesh and Punjab and to the west of Ladakh, which is also subject to the dispute as a part of Kashmir, and administered by India as a union territory.
+
+Provisions for the formation of the union territory of Jammu and Kashmir were contained within the Jammu and Kashmir Reorganisation Act, 2019, which was passed by both houses of the Parliament of India in August 2019. The act re-constituted the former state of Jammu and Kashmir into two union territories, Jammu and Kashmir and Ladakh, with effect from 31 October 2019.
+The state of Jammu and Kashmir was accorded special status by Article 370 of the Constitution of India. In contrast to other states of India, Jammu and Kashmir had its own constitution, flag and administrative autonomy.[23] Indian citizens from other states were not allowed to purchase land or property in Jammu and Kashmir.[24]
+
+Jammu and Kashmir had three distinct areas: Hindu-majority Jammu region, Muslim-majority Kashmir Valley and Buddhist-dominated Ladakh.[25] Unrest and violence persisted in the Kashmiri Valley and, following a disputed state election in 1987, an insurgency persisted in protest over autonomy and rights.[25][26]
+
+The Bharatiya Janata Party (BJP) came to power in the 2014 Indian general election and five years later included in their 2019 election manifesto the revocation of Article 370 of the Constitution of India, in order to bring Jammu and Kashmir to equal status with other states.[25]
+
+A resolution to repeal Article 370 was passed by both the houses of the Parliament of India in August 2019. At the same time, a reorganisation act was also passed, which would reconstitute the state into two union territories, Jammu and Kashmir and Ladakh.[27] The reorganisation took effect from 31 October 2019.
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pahalgam_Valley.jpg/1200px-Pahalgam_Valley.jpg
+                    "
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box2">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+            jammu-kashmir</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Jammu and Kashmir is home to several valleys such as the Kashmir Valley, Tawi Valley, Chenab Valley, Poonch Valley, Sind Valley and Lidder Valley.[30] The Kashmir valley is 100 km (62 mi) wide and 15,520.3 km2 (5,992.4 sq mi) in area.[31] The Himalayas divide the Kashmir valley from the Tibetan plateau while the Pir Panjal range, which encloses the valley from the west and the south, separates it from the Punjab Plain of the Indo-Gangetic Plain.[32] Along the northeastern flank of the Valley runs the main range of the Himalayas.[33] This valley has an average height of 1,850 metres (6,070 ft) above sea-level,[31] but the surrounding Pir Panjal range has an average elevation of 10,000 feet (3,000 m).[34] The Jhelum River is the major Himalayan river which flows through the Kashmir valley.[35] The Tawi, Ravi and Chenab are the other important rivers flowing through the region.
+            ammu and Kashmir's economy is primarily services-based and agriculture-oriented.[66] The gross domestic product of Jammu and Kashmir is estimated at ₹1.76 lakh crore (US$25 billion) in 2020–21.[67]
+
+The Kashmir Valley is known for its sericulture and cold-water fisheries.[68] Wood from Kashmir is used to make high-quality cricket bats, popularly known as Kashmir Willow.[69] Major agricultural exports from Jammu and Kashmir include apples, pears, cherries, plums, saffron and walnuts.[70] The traditional Kashmiri handicrafts industry employs a large workforce of around 340 thousand artisans and has potential for producing export goods.[66] Small-scale cottage industries include carpet weaving, silks, shawls, basketry, pottery, copper and silverware, papier-mâché and walnut wood.[66] The horticulture sector is the next biggest source of income in the economy. The temperature of Jammu and Kashmir is also suited to floriculture and can support various species of flora.[66]
+
+Over 500 mineral blocks are present in Jammu and Kashmir, 261 of which are in the Kashmir Division alone.[71] Kishtwar is known as the 'land of sapphire and saffron'.[72] Resources such as timber, herbs and medicinal shrubs, edibles such as mushroom, chilgoza, black zeera and saffron are available in the forests.[73] The sapphire reserve mines of Machail, Paddar are a source of mineral wealth.[73] Jammu and Kashmir is the only administrative unit in India with a large amount of borax and sapphire resources.[71] It possesses 36 percent of the graphite, 21 percent marble and 14 percent of gypsum present in India.[71] Coal, limestone and magnesite are found scattered among the different districts of the union territory
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="data:image/jpeg;base64,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"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box3">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+            jammu-kashmir</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            
+            Kashmir is famous for its beauty and natural scenery throughout the world. Its high snow-clad mountains, scenic spots, beautiful valleys, rivers with ice-cold water, attractive lakes and springs and ever-green fields, dense forests and beautiful health resorts, enhance its grandeur and are a source of great attraction for tourists.
+
+            t is also widely known for its different kinds of agricultural products, fruit, vegetables, saffron, herbs, minerals, precious stones handicrafts like woollen carpets, shawls and finest kind of embroidery on clothes. During summer, one can enjoy the beauty of nature, trout fishing, big and small game hunting etc.; during winter climbing mountain peaks and sports like skating and skiing on snow slopes are commonly enjoyed . In addition to the above, Pilgrimage to famous religious shrines of the Hindus and the Muslims make Kashmir a great tourist attraction. About Kashmir Sheikh Sadia great Persian poet is believed to have said said, “If there is any heaven on earth, it is here in Kashmir. ”
+            The forest cover of the state as per State of Forest Report 2003 issued by Forest Survey of India is 24214 sq kms which is 110 sq km less than the 2001 assessment. As per the report 1351 sq km of dense forests has degraded to either open forest, scrub or non-forest.
+            In the recent era, the geography of Kashmir is divided among India, Pakistan, and China. The northwestern part of Kashmir is controlled by Pakistan, the Central and southern part by India, and the north-eastern part of Kashmir is controlled by China. Most of the region of Kashmir is undeveloped and is ruled by huge mountain ranges such as the Karakoram and the Himalayan Ranges. The Kashmir valley is situated between these mountain ranges and it also has many rivers in this region. 
+
+The geographical location of Kashmir denotes that it is surrounded by many foreign countries. Ans so, Kashmir valley is quite important from a strategic viewpoint. The region has an area of around 101387 sq. km. It lies between Latitude 32°17’ and 37°05’ North and longitude 72°31’ and 80°20’ East. The State is divided into three geographic regions Kashmir Valley, Ladakh, and Jammu. The top regions of Kashmir are covered by Karakoram, Pir Panjal, and inner Himalayan ranges of mountains. Most of the Kashmir tours Packages are planned based on the region and best time to travel. 
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/article_images/2017/12/02/646017.jpg?itok=O5KNY3r3
+                    " alt=""
+                    width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box4">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourism in Jammu and Kashmir
+        </h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Jammu and Kashmir is home to several valleys such as the Kashmir Valley, Chenab Valley, Sindh Valley and Lidder Valley. Some major tourist attractions in Jammu and Kashmir are Srinagar, the Mughal Gardens, Gulmarg, Pahalgam, Patnitop and Jammu. Every year, thousands of Hindu pilgrims visit holy shrines of Vaishno Devi and Amarnath which has had significant impact on the state's economy.[1]
+
+            Kashmir Valley is one of the top tourist destinations of India.[2] Gulmarg, one of the most popular ski resort destinations in India, is also home to the world's highest green golf course.[3] Tourism has suffered a lot during past thirty years and it is still in mess.[4]People associated with tourism and other private businesses are facing potential challenges and always suffer huge losses due to the unprecedented situation in the territory.
+            
+            Jammu and Kashmir is also famous for its scenic beauty, flower gardens, apple farms and more. It attracts tourists for its unique handicrafts and the world-famous Kashmiri Shawls.
+            Tourism is the largest industry in Jammu city. It is also a focal point for the pilgrims going to Vaishno Devi and Kashmir valley as it is second last railway terminal in North India. All the routes leading to Kashmir, Poonch, Doda and Laddakh start from Jammu city. So throughout the year, the city remains full of people from all the parts of India. Places of interest include old historic palaces like Mubarak Mandi Palace, Purani Mandi, Rani Park, Amar Mahal, Bahu Fort, Raghunath Temple, Ranbireshwar Temple, Karbala, Peer Meetha, Old city.
+            Srinagar is one of several places that have been called the "Venice of the East".[16][17][18] Lakes around the city include Dal Lake – noted for its houseboats – and Nigeen Lake. Apart from Dal Lake and Nigeen Lake, Wular Lake and Manasbal Lake both lie to the north of Srinagar. Wular Lake is one of the largest fresh water lakes in Asia.
+
+Srinagar has some Mughal gardens, forming a part of those laid by the Mughal emperors across the Indian subcontinent. Those of Srinagar and its close vicinity include Chashma Shahi (the royal fountains); Pari Mahal (the palace of the fairies); Nishat Bagh (the garden of spring); Shalimar Bagh; the Naseem Bagh. Jawaharlal Nehru Memorial Botanical Garden is a botanical garden in the city, set up in 1969.[19] The Indian government has included these gardens under "Mughal Gardens of Jammu and Kashmir" in the tentative list for sites to be included in world Heritage sites.
+
+The Sher Garhi Palace houses administrative buildings from the state government.[20] Another palace of the Maharajas, the Gulab Bhavan, has now become the Lalit Grand Palace hotel.[21]
+
+The Shankaracharya Temple which lies on a hill top in the middle of the city, besides the Kheer Bhawani Temple are important Hindu temples in the city.[
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://images.hindustantimes.com/img/2021/04/11/550x309/pjimage_-_2021-04-11T105449.453_1618118746937_1618118755464.jpg
+                    "
+                    alt="" width="800px" height="600px">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
