@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>DELHI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>DELHI</h1>
+    <br>
+    <br>
+    <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://media.easemytrip.com/media/Blog/India/636927396474187392/636927396474187392ozkrTH.jpg"
+                    class="d-block w-100" alt="..." height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://cdn.britannica.com/73/156473-050-E0E9F844/Vidah-Sauda-state-legislature-building-Karnataka-Bengaluru.jpg"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://static2.tripoto.com/media/filter/tst/img/1690554/TripDocument/1580819939_karnataka.png"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+   <center>
+    <div class="img-slider" style="background-color: black;">
+        <div class="slide active">
+          <img src="https://cdn.britannica.com/37/189837-050-F0AF383E/New-Delhi-India-War-Memorial-arch-Sir.jpg" style="border:solid 10px yellow; border-radius: 5px;"
+           alt="">
+          <div class="info">
+            <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_lt4DPwrGKv1LCNENsbLRh7itWB9YDlRVA&usqp=CAU" alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+          <div class="info">
+            
+          </div>
+        </div>
+         <div class="slide">
+          <img src="https://www.hlimg.com/images/stories/738X538/delhi1_1510654078m.jpg" alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+          <div class="info">
+           
+          </div>
+        </div><!--
+        <div class="slide">
+          <img src="4.jpg" alt="">
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="5.jpg" alt="">
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div> -->
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </center>
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 5000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+   <br>
+   <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="box1">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About Delhi</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Delhi (/ˈdɛli/; Hindi pronunciation: [ˈdɪlːiː] Dillī; Punjabi pronunciation: [ˈdɪlːiː] Dillī; Urdu pronunciation: [ˈdɛɦliː] Dêhlī),[15] officially the National Capital Territory (NCT) of Delhi, is a city and a union territory of India containing New Delhi, the capital of India.[16][17] It is bordered by the state of Haryana on three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq mi).[5] According to the 2011 census, Delhi's city proper population was over 11 million,[6] the second-highest in India after Mumbai,[18] while the whole NCT's population was about 16.8 million.[7] Delhi's urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite cities of Ghaziabad, Faridabad, Gurgaon and Noida in an area called the National Capital Region (NCR) and had an estimated 2018 population of over 28 million people, making it the world's second-largest urban area according to the United Nations.[8] Recent estimates of the metro economy of its urban area have ranked Delhi either the most or second-most productive metro area of India.[11][19] Delhi is the second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires.[20] Delhi ranks fifth among the Indian states and union territories in human development index.[13] Delhi has the second-highest GDP per capita in India.[10] Delhi is of great historical significance as an important commercial, transport, and cultural hub, as well as the political centre of India.[21]
+
+            Delhi is one of the oldest cities in the world, and has been continuously inhabited since the 6th century BCE.[22] Through most of its history, Delhi has served as a capital of various kingdoms and empires, most notably the Tomars, Chahamanas, Delhi Sultanate and Mughals. It is also assumed to be the location of Indraprastha, the capital of the Pandavas in the epic Mahabharata. The city has been captured, ransacked and rebuilt several times, particularly during the medieval period, and modern Delhi is a cluster of a number of cities spread across the metropolitan region. For many centuries Delhi has been a dominant trading and commercial centre in northern India, and since the 1990s it has emerged as an important node in the international corporate and financial network.[23]
+            
+            Although a union territory, the political administration of the NCT of Delhi today more closely resembles that of a state of India, with its own legislature, high court and an executive council of ministers headed by a Chief Minister. New Delhi is jointly administered by the federal government of India and the local government of Delhi, and serves as the capital of the nation as well as the NCT of Delhi. Delhi hosted the inaugural 1951 Asian Games, 1982 Asian Games, 1983 NAM Summit, 2010 Men's Hockey World Cup, 2010 Commonwealth Games, 2012 BRICS Summit and was one of the major host cities of the 2011 Cricket World Cup.
+            
+            Delhi is also the centre of the National Capital Region (NCR), which is a unique 'interstate regional planning' area created by the National Capital Region Planning Board Act of 1985
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://www.hlimg.com/images/stories/738X538/delhi1_1510654078m.jpg"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box2">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+            Delhi</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Delhi, a true cosmopolitan city with diversified culture is the capital of the world’s largest democracy, India. Known as Indraprastha in ancient times.
+
+The state is spread over an area of 1483 square kilometer. According to the Indian geography the state is located at the center of the Indian subcontinent, amidst the ranges of Himalaya and the Aravalli. Delhi has been wooed by rulers, attracted invaders and has been build and destroyed several times. Historians say that is has been rebuilt seven times during different ages.
+
+Situated on the banks of river Yamuna, Delhi is located at 28.38° N and 77.13° E on the northern part of India. There are three major geographical regions: the Yamuna flood plain, the ridge & the Gangetic Plains. The Yamuna flood plains provide fertile soil suitable for agriculture. However, these plains are prone to recurrent floods. With an average altitude of 293 m above sea level, the ridge forms the most dominating feature in this region.
+
+Delhi comprises of 200 villages which are heavily populated.Haryana and Uttar Pradesh are the other states, which share their borders with Delhi in the west and east respectively.
+
+It originates from the Aravalli Hills in the south and encircles the west, north-east and north-west portions of the city. The Great Plains are located in the south of the city and cover most of Delhi.
+
+Delhi geography gives an overview of the capital city of India bearing a rich cultural background.
+
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_lt4DPwrGKv1LCNENsbLRh7itWB9YDlRVA&usqp=CAU"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box3">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+            Delhi</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Public transport in the metropolis includes the Delhi Metro, the Delhi Transport Corporation (DTC) bus system, auto-rickshaws, cycle-rickshaws, e-rickshaws, Grameen Seva and taxis. With the introduction of Delhi Metro, a rail-based mass rapid transit system, rail-based transit systems have gained ground. Other means of transit include suburban railways, inter-state bus services and private taxis which can be rented for various purposes. However, buses continue to be the most popular means of transportation for intra-city travel, catering to about 60% of the total commuting requirements.[6]
+
+            Private vehicles account for 30%[citation needed] of the total demand for transport, while the rest of the demand is met largely by auto-rickshaws, taxis, rapid transit system and railways.
+            
+            Indira Gandhi International Airport (IGI) serves Delhi for both domestic and international air connections, and is situated in the south-western corner of the city. In 2009–2010, IGI recorded a traffic of more than 25.01[7] million passengers, both Domestic and International.[8] Heavy air traffic has emphasised the need for a secondary airport, which is expected to be Taj International Airport near Greater Noida, alongside the Delhi-Agra highway.
+            
+            The Delhi government planned to have 413 km of metro, 292 km of BRT, and 50 km each of monorail and light rail by 2020.[9]
+            
+            Currently, the only international rail service in Delhi is the Samjhauta Express to Lahore, while it is possible to change trains to board rail services to Bangladesh and Nepal which commence in other cities of India. For the future, a high-speed rail link is being considered that would link New Delhi with Kunming, China via Myanmar
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="data:image/jpeg;base64,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
+                    " alt=""
+                    width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box4">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourism in Delhi
+        </h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Delhi Tourism, a government undertaking facilitating tourism since 1975 will take you to a guided tour of the Delhi through this website which explores the wonders of this city be it its heritage, the art and crafts, the diverse cuisine and culture.
+
+ 
+
+A symbol of the country’s rich past and thriving present, Delhi is a city where ancient and modern blend seamlessly together. It is a place that not only touches your pulse but even fastens it to a frenetic speed. Home to millions of dreams, the city takes on unprecedented responsibilities of realizing dreams bringing people closer and inspiring their thoughts.
+
+ 
+
+Just a century ago, the British moved the seat of their empire from Kolkata to Delhi. And it has been the Capital of India ever since. Now a thriving, cosmopolitan metro, the city has much to celebrate as it has already reached the milestone of completing 100 years as a Capital. With a history that goes back many centuries, Delhi showcases an ancient culture and a rapidly modernising country. Dotted with monuments there is much to discover here. The seat of many powerful empires in the past, its long history can be traced in its many carefully-preserved monuments, ancient forts and tombs.
+
+ 
+
+All this is combined with the best features of a modern city such as a metro system, bustling markets and fabulous eating places. The past and the present meld seamlessly together, making centuries-old monuments a part of the city’s daily life. Delhi is very much a history’s child. The story of the city is as old as the epic Mahabharata, when the town was known as Indraprastha, where Pandavas used to live. Over the centuries, eight more cities came alive adjacent to Indraprastha: Lal Kot, Siri, Dinpanah, Quila Rai Pithora, Ferozabad, Jahanpanah, Tughlakabad and Shahjahanabad. Many empires rose to the heights of their power and were destroyed here. Among the prominent dynasties which made Delhi their capital were the Tughlaqs, the Khiljis and the Mughals.
+
+ 
+
+Even today, one can have a fascinating glimpse into the past in Old Delhi, with its labyrinth of narrow lanes, old havelis, and colourful bazaars. Rickshaws wind their way through this crowded, bustling capital of the Mughals, where life continues, much as it did hundreds of years ago. It is home to three World Heritage monuments—Qutub Minar, Red Fort and Humayun’s Tomb that have survived many centuries, and give an idea of architectural wonders created by emperors in the past. Central Delhi, with its tree-lined avenues, imposing structures and buildings such as the Rashtrapati Bhavan, Parliament House and India Gate, reflect Delhi’s colonial past. A number of museums provide a glimpse into the country’s fascinating history.
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://cdn.britannica.com/37/189837-050-F0AF383E/New-Delhi-India-War-Memorial-arch-Sir.jpg"
+                    alt="" width="800px" height="600px">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
